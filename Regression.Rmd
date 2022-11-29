@@ -1,0 +1,87 @@
+---
+title: "Regression"
+output: html_notebook
+---
+# Introduction
+
+This is about regression. We are going to perform regression analysis uing the marketing data of the datarium in r
+
+# The Data
+
+The marketing data gas 200 observations and 4 variables namely: youtube, facebook, newspaper, and sales.
+
+
+```{r echo=FALSE, results='hide'}
+summary(marketing$youtube)
+summary(marketing$facebook)
+summary(marketing$newspaper)
+summary(marketing$sales)
+```
+
+
+# Loading Required R Packages
+
+```{r echo=FALSE, results='hide'}
+# install packages if not yet installed
+library(tidyverse) # loading tidyverse 
+library(caret) # loading caret
+library(ggpubr) # loading ggpubr
+theme_set(theme_bw()) # i don't know
+```
+
+```{r echo=FALSE, results='hide'}
+# install datarium if not yet installed at the console
+library(datarium) # loading datarium
+```
+
+# Preparing Data
+
+```{r echo=FALSE, results='hide'}
+# Load the data
+data("marketing", package = "datarium")
+# Inspect the data
+sample_n(marketing, 3)
+```
+
+```{r echo=FALSE, results='hide'}
+# Split the data into training and test set
+set.seed(123)
+training.samples <- marketing$sales %>%
+  createDataPartition(p = 0.8, list = FALSE)
+train.data  <- marketing[training.samples, ]
+test.data <- marketing[-training.samples, ]
+```
+
+# Quick Start R Code
+
+```{r echo=FALSE, results='hide'}
+# Build the model
+model <- lm(sales ~., data = train.data)
+# Summarize the model
+summary(model)
+# Make predictions
+predictions <- model %>% predict(test.data)
+# Model performance
+# (a) Prediction error, RMSE
+RMSE(predictions, test.data$sales)
+# (b) R-square
+R2(predictions, test.data$sales)
+```
+
+```{r echo=FALSE, results='hide'}
+# predicting with new data
+# 
+youtube <- 10
+facebook <- 80
+newspaper <- 0
+
+a <- data.frame (youtube, facebook, newspaper)
+p <- model %>% predict(a)
+p
+```
+
+# our model is as follows:
+
+$$\hat{y}=4.12 + 0.04x_1 + 0.21x_2 + \epsilon$$ 
+
+where $\hat{y}$ is sales and $x_1$ is youtube, $x_2$ is facebook, and $\epsilon$ is the error term. 
