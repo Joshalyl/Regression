@@ -1,0 +1,19 @@
+---
+title: "Quarto Assignment"
+output: html_notebook
+---
+
+1. What package are they talking about?
+  - The package that they are talking about is the Quarto Package. With quarto package, users can write reports in R Markdown and produce high-quality outputs in PDF, HTML, and other formats. The package includes features such as automatic formatting, table and figure captions, cross-referencing, and bibliographies, making it a useful tool for anyone looking to create well-formatted, professional reports in R.
+  
+2. Why is there a need to shift from RMarkdown with the said package?
+  -R Markdown is a simple and flexible tool that allows users to write reports in a markdown format and compile them into a variety of output formats, including PDF, HTML, and Word. It is well-suited for small reports, but may not have the same level of customization and formatting options as quarto. On the other hand, the quarto package provides additional functionality for creating more complex reports, such as automatic formatting, table and figure captions, cross-referencing, and bibliographies. It is designed to simplify the process of creating reports, allowing users to focus on the content rather than the formatting.
+  
+3. What inspired/sparked the said shift?
+  -With quarto package fovused more in comprehensive tool for creating complex reports with advanced formatting and functionality which is a good change to make everything easier, faster and more convinient.
+  
+4. Are you up to the challenge of the said shift, learnig it and appyling it in your future career as math teacher?
+  -In my future career as math teacher, I am up for the challenge to the said shift, learning it and applying it to make my work and teaching more efficient, enjoyable, remarkable and so that I will be able to share it to my students for future purposes also.
+  
+5. What cool feature in the package did you like best? Please discuss, thanks.
+  -The quarto package in R Studio has several cool features that make it a useful tool for creating high-quality reports in R.The quarto package includes templates for automatically formatting reports, making it easier for users to creat professional-looking documents. The package provides support for adding captions to tables and figures, making it easier to document and reference these elements within the report. Quarto includes features for cross-referencing sections, tables, and figures within the report, making it easier to navigate and understand the document and it also provides a range of templates that can be customized to meet the specific needs of the user. Reports created using quarto can be output in a variety of formats, including PDF, HTML, and Word.
